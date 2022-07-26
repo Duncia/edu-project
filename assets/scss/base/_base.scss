@@ -1,0 +1,19 @@
+/*Base reset of styles*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img, embed, object, video {
+    width: 100%;
+    height: auto;
+}
+a, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background-color: $color-white;
+}

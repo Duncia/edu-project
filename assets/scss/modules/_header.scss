@@ -1,0 +1,84 @@
+.header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-dark;
+
+    &__left {
+        display: flex;
+        align-items: center;
+
+        .title{
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        .explore{
+            font-size: 1.5rem;
+        }
+        .menu {
+            background-color: $color-dark;
+            width: 2rem;
+            height: 2px;
+            position: relative;
+            cursor: pointer;
+        }
+        .menu::after{
+            content: "";
+            position: absolute;
+            top: -8px;
+            height: 2px;
+            width: 1.5rem;
+            margin-left: .5rem;
+            background-color: $color-dark;
+        }
+        .menu::before{
+            content: "";
+            position: absolute;
+            top: 8px;
+            height: 2px;
+            width: 1.5rem;
+            background-color: $color-dark;
+        }
+    }
+    &__main-menu ul {
+        display: none;
+        align-items: center;
+        @include desktop {
+            display: flex;
+        };
+
+        li{
+            position: relative;
+            cursor: pointer;
+            margin: 0rem 1.5rem;
+            list-style: none;
+            font-size: 1.5rem;
+        }
+        li:not(:last-child):after{
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.07671 5.33934L8.86404 1.55194C8.9517 1.46434 9 1.34741 9 1.22272C9 1.09804 8.9517 0.981104 8.86404 0.893506L8.58519 0.61459C8.40349 0.433098 8.10818 0.433098 7.92675 0.61459L4.74638 3.79496L1.56248 0.611061C1.47482 0.523463 1.35795 0.475097 1.23333 0.475097C1.10858 0.475097 0.991712 0.523463 0.903976 0.611061L0.625198 0.889976C0.537531 0.977644 0.489235 1.09451 0.489235 1.2192C0.489235 1.34388 0.537531 1.46082 0.625198 1.54841L4.41599 5.33934C4.50393 5.42715 4.62135 5.47537 4.74617 5.4751C4.87148 5.47537 4.98883 5.42715 5.07671 5.33934Z' fill='%23202124'/%3E%3C/svg%3E");
+            position: absolute;
+            top: 7px;
+            width: 10px;
+            height: 5px;
+            background-repeat: no-repeat;
+            margin-left: 5px;
+        }
+    }
+    &__right {
+        display: none;
+        align-items: center;
+        @include smallLaptop {
+            display: flex;
+        };
+
+        svg{
+            cursor: pointer;
+        }
+
+        .login {
+            font-size: 1.5rem;
+        }
+    }
+}

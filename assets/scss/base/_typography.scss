@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: local('GT Walsheim Pro Regular'), local('GT-Walsheim-Pro-Regular'),
+        url('/assets/fonts/GTWalsheimPro-Regular.woff2') format('woff2'),
+        url('/assets/fonts/GTWalsheimPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: local('GT Walsheim Pro Bold'), local('GT-Walsheim-Pro-Bold'),
+        url('/assets/fonts/GTWalsheimPro-Bold.woff2') format('woff2'),
+        url('/assets/fonts/GTWalsheimPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html{
+    font-family: 'GT Walsheim Pro';
+    font-weight: 400;
+    font-size: 50.0%;
+    line-height: 1;
+
+    @include tablet {
+        font-size: 60.0%;
+    };
+    @include smallLaptop {
+        font-size: 62.5%;
+    };
+    @include largeScreen {
+        font-size: 75%;
+    };
+}
+
+h1, h3, h3, p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: $color-dark;
+}
+h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+p {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.par-17 {
+    font-size: 1.7rem;
+    font-weight: 700;
+}

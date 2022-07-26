@@ -1,0 +1,189 @@
+.hero {
+    position: relative;
+
+    &__background {
+        display: none;
+        @include smallLaptop {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 2rem;
+            z-index: -1;
+        };
+    }
+
+    &__blob--green {
+        position: absolute;
+        top: -50rem;
+        left: -25rem;
+        max-width: 60rem;
+        z-index: -1;
+        @include tablet {
+            top: -45rem;
+        };
+        @include smallLaptop {
+            top: -40rem;
+        };
+        @include largeScreen {
+            top: -35rem;
+        };
+    }
+
+    &__blob--purple::after{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='1280' height='1116' viewBox='0 0 1280 1116' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.05' d='M288.477 966.833C238.017 885.481 176.21 805.702 103.057 727.494C29.904 649.286 -4.16634 553.609 0.846142 440.461C5.85862 327.314 63.4137 249.724 173.511 207.692C283.609 165.659 374.917 118.001 447.437 64.716C519.956 11.4312 601.042 -8.47733 690.695 4.99041C780.349 18.4582 884.112 25.5672 1001.98 26.3175C1119.86 27.0677 1180.89 86.0925 1185.08 203.392C1189.27 320.691 1212.64 425.858 1255.2 518.892C1297.75 611.925 1285.02 696.249 1217.01 771.863C1149 847.476 1080.29 912.244 1010.88 966.165C941.474 1020.09 864.091 1060.7 778.734 1088.01C693.377 1115.31 602.943 1122.28 507.433 1108.91C411.923 1095.54 338.938 1048.19 288.477 966.833Z' fill='%236440FB'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        display: none;
+        @include smallLaptop {
+            display: block;
+            height: 110rem;
+            width: 35rem;
+            margin-top: -60rem;
+        };
+        @include desktop {
+            height: 110rem;
+            width: 45rem;
+            margin-top: -25rem;
+        };
+    }
+    
+    
+}
+.content {
+    max-width: 120rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    @include smallLaptop {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__text{
+        max-width: 50rem;
+        margin: auto;
+        padding: 2rem;
+        &--par {
+            line-height: 2;
+            max-width: 35rem;
+        }
+    }
+    &__video{
+        padding: 2rem;
+
+        .wrapper {
+            display: block;
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            max-width: 50rem;
+        }
+    }
+}
+
+.popular {
+
+    &__text{
+        display: block;
+        margin-bottom: 4rem;
+        @include smallLaptop {
+            display: flex;
+        };
+        justify-content: space-between;
+        align-items: end;
+        padding: 0rem 2rem;
+    }
+
+    &__heading{
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    &__boxes{
+        padding: 0rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        };
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        };
+        grid-gap: 2rem;
+    }
+    .box{
+        max-width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid $color-light-grey;
+        border-radius: .8rem;
+        img {
+            border-radius: .8rem .8rem 0rem 0rem;
+        }
+        &__rating {
+            padding: 1rem;
+            span {
+                color: $color-gold;
+                font-size: 1.4rem;
+                font-weight: 700;
+                padding-right: 1rem;
+            }
+            p{
+                font-size: 1.3rem;
+                display: inline-block;
+                padding-left: 1rem;
+            }
+        }
+        &__title{
+            font-size: 1.7rem;
+            line-height: 2.6rem;
+            font-weight: 400;
+            color: $color-dark;
+            padding: 0rem 1rem;
+        }
+        &__details{
+            display: flex;
+            align-items: center;
+            padding: 1rem 1rem;
+            color: $color-dark-blue;
+            font-size: 1.1rem;
+            .lesson {
+                margin-right: .9rem;
+            }
+            .clock {
+                margin-right: .9rem;
+            }
+        }
+        &__separator{
+            background-color: $color-light-grey;
+            height: 1px;
+            margin: 1rem;
+        }
+        &__price{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 1rem 1rem 1rem;
+            color: $color-dark-blue;
+
+            .name{
+                font-size: 1.4rem;
+            }
+            .amount{
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+            .amount span{
+                font-size: 1.5rem;
+                padding-right: 1rem;
+                text-decoration: line-through;
+                font-weight: 400;
+            }
+        }
+    }
+}
