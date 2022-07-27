@@ -3,6 +3,12 @@
 ?>
 <?php get_header(); ?>
 
+<div class="video-overlay display-none">
+    <p class="video-overlay__close">Close video</p>
+    <div class="video-overlay__frame">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QNTeq4QdOsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
 <section class="hero">
     <svg class="hero__blob--green" width="996" height="874" viewBox="0 0 996 874" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path opacity="0.07" d="M41.8681 577.958C39.4398 501.125 28.4899 420.831 9.01849 337.073C-10.453 253.316 4.26825 173.102 53.1821 96.4305C102.096 19.7592 173.272 -11.0896 266.711 3.88426C360.15 18.8581 442.782 22.3757 514.606 14.437C586.431 6.49835 650.812 25.2095 707.751 70.5705C764.689 115.932 833.993 162.536 915.662 210.383C997.332 258.23 1016.08 323.781 971.893 407.034C927.711 490.287 901.74 572.805 893.981 654.588C886.223 736.37 843.515 789.9 765.86 815.175C688.205 840.451 614.419 857.904 544.504 867.535C474.588 877.166 404.47 874.34 334.148 859.059C263.826 843.777 198.14 812.315 137.088 764.672C76.0363 717.029 44.2963 654.791 41.8681 577.958Z" fill="#00FF84"/></svg>
@@ -29,13 +35,14 @@
                 </defs>
                 <image width="100%" height="100%" preserveAspectRatio="xMinYMin slice" href="<?php echo get_template_directory_uri() . '/img/hero-img.jpg'; ?>" clip-path="url(#user-space)"/>
                 </svg>
+                <div class="play-button"><img src="<?php echo get_template_directory_uri() . '/img/play.svg'; ?>" alt="Play"></div>
             </div>
         </div>
     </div>
     <div class="hero__blob--purple">
     </div>
 </section>
-<section class="popular container pt-lr">
+<section class="popular container pt-lr pb-lr">
     <div class="popular__text">
         <div class="popular__heading">
             <h3 class="pb-sm">Our Most Popular Courses</h3>
@@ -101,7 +108,34 @@
     ?>
     </div>
 </section>
-
+<section class="start-learning pb-lr">
+    <div class="start-learning__top">
+        <h3 class="clr-white pb-sm">Start your Learning Journey Today!</h3>
+        <p class="clr-white pb-sm">Lorem ipsum dolor sit amet, consectetur.</p>
+    </div>
+    <div class="start-learning__boxes container">
+        <div class="box">
+            <img src="<?php echo get_template_directory_uri() . '/img/rating.svg'; ?>" alt="Rating">
+            <h4><?php the_field('start-learning-title');?></h4>
+            <p><?php the_field('start-learning-content');?></p>
+        </div>
+        <div class="box">
+            <img src="<?php echo get_template_directory_uri() . '/img/science.svg'; ?>" alt="Rating">
+            <h4>Learn Anything</h4>
+            <p>Grursus mal suada faci lisis that ipsum ameti consecte.</p>
+        </div>
+        <div class="box">
+            <img src="<?php echo get_template_directory_uri() . '/img/online-learning.svg'; ?>" alt="Rating">
+            <h4>Flexible Learning</h4>
+            <p>Grursus mal suada faci lisis that ipsum ameti consecte.</p>
+        </div>
+        <div class="box">
+            <img src="<?php echo get_template_directory_uri() . '/img/certificate.svg'; ?>" alt="Rating">
+            <h4>Industrial Standart</h4>
+            <p>Grursus mal suada faci lisis that ipsum ameti consecte.</p>
+        </div>
+    </div>
+</section>
 
 
 <?php get_footer(); ?>

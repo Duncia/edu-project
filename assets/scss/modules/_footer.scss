@@ -1,0 +1,44 @@
+.footer{
+
+    &__top{
+
+        p{
+            color: $color-dark-blue;
+        }
+    }
+    &__nav{
+        padding: 0rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include tablet {
+            grid-template-columns: 1fr 1fr 1fr;
+        };
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        };
+        grid-gap: 2rem;
+        .nav-block{
+            &__title{
+                font-size: 1.7rem;
+                font-weight: 700;
+                line-height: 2.6rem;
+                color: $color-dark;
+            }
+            ul {
+
+                li {
+                    list-style: none;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    line-height: 3rem;
+                    color: $color-dark-blue;
+                }
+            }
+            &__link{
+                color: $color-blue;
+                font-size: 1.5rem;
+                text-decoration: underline;
+            }
+        }
+    }
+}

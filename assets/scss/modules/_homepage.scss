@@ -77,11 +77,24 @@
         padding: 2rem;
 
         .wrapper {
+            position: relative;
             display: block;
             height: 100%;
             width: 100%;
             margin: auto;
             max-width: 50rem;
+            .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: white;
+                padding: 2rem;
+                border-radius: 10rem;
+                cursor: pointer;
+                img {
+                    max-width: 3rem;
+                }
+            }
         }
     }
 }
@@ -184,6 +197,56 @@
                 text-decoration: line-through;
                 font-weight: 400;
             }
+        }
+    }
+    .box:hover{
+        transform: scale(0.98);
+    }
+}
+.start-learning {
+    text-align: center;
+    background-color: linear-gradient($color-bg-purple 0%, $color-bg-purple 70%, $color-white 70%);
+    background: linear-gradient($color-bg-purple 0%, $color-bg-purple 70%, $color-white 70%);
+
+    &__top{
+        padding: 10rem 2rem 6rem 2rem;
+    }
+    &__boxes{
+        padding: 0rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        };
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        };
+        grid-gap: 2rem;
+        .box{
+            max-width: 30rem;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $color-white;
+            text-align: center;
+            border-radius: .8rem;
+            padding: 4rem 3rem;
+            box-shadow: 0 1.5rem 1.5rem 0 rgb(0 0 0 / 5%), 0 0 1.5rem 0 rgb(0 0 0 / 5%);
+            img {
+                max-width: 6rem;
+            }
+            h4 {
+                color: $color-dark;
+                font-size: 1.8rem;
+                padding: 1.2rem 0rem;
+            }
+            p {
+                color: $color-dark-blue;
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+            }
+        }
+        .box:hover{
+            transform: scale(0.98);
         }
     }
 }
